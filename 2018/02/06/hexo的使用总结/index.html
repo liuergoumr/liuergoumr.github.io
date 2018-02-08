@@ -79,19 +79,19 @@
 
 
 
-<meta name="description" content="_config.yml配置,对比,将来false改为true 添加字体统计,阅读时间统计#Post wordcount display settings #Dependencies: https://github.com/willin/hexo-wordcount post_wordcount:   item_text: true   wordcount: true   min2read: tru">
+<meta name="description" content="_config.yml配置,对比,将来false改为true 添加字体统计,阅读时间统计不显示数字安装 npm install hexo-wordcount --save  ## hexo字数统计 #Post wordcount display settings #Dependencies: https://github.com/willin/hexo-wordcount post_wordcou">
 <meta name="keywords" content="hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo的使用总结">
 <meta property="og:url" content="http://yoursite.com/2018/02/06/hexo的使用总结/index.html">
 <meta property="og:site_name" content="liuergoumr">
-<meta property="og:description" content="_config.yml配置,对比,将来false改为true 添加字体统计,阅读时间统计#Post wordcount display settings #Dependencies: https://github.com/willin/hexo-wordcount post_wordcount:   item_text: true   wordcount: true   min2read: tru">
+<meta property="og:description" content="_config.yml配置,对比,将来false改为true 添加字体统计,阅读时间统计不显示数字安装 npm install hexo-wordcount --save  ## hexo字数统计 #Post wordcount display settings #Dependencies: https://github.com/willin/hexo-wordcount post_wordcou">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&fm=27&gp=0.jpg">
-<meta property="og:updated_time" content="2018-02-06T13:59:04.362Z">
+<meta property="og:updated_time" content="2018-02-07T04:01:16.013Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo的使用总结">
-<meta name="twitter:description" content="_config.yml配置,对比,将来false改为true 添加字体统计,阅读时间统计#Post wordcount display settings #Dependencies: https://github.com/willin/hexo-wordcount post_wordcount:   item_text: true   wordcount: true   min2read: tru">
+<meta name="twitter:description" content="_config.yml配置,对比,将来false改为true 添加字体统计,阅读时间统计不显示数字安装 npm install hexo-wordcount --save  ## hexo字数统计 #Post wordcount display settings #Dependencies: https://github.com/willin/hexo-wordcount post_wordcou">
 <meta name="twitter:image" content="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&fm=27&gp=0.jpg">
 
 
@@ -303,7 +303,8 @@
 
       
         <p>_config.yml<br>配置,对比,将来false改为true</p>
-<h3 id="添加字体统计-阅读时间统计"><a href="#添加字体统计-阅读时间统计" class="headerlink" title="添加字体统计,阅读时间统计"></a>添加字体统计,阅读时间统计</h3><pre><code>#Post wordcount display settings
+<h3 id="添加字体统计-阅读时间统计"><a href="#添加字体统计-阅读时间统计" class="headerlink" title="添加字体统计,阅读时间统计"></a>添加字体统计,阅读时间统计</h3><pre><code>不显示数字安装 npm install hexo-wordcount --save  ## hexo字数统计
+#Post wordcount display settings
 #Dependencies: https://github.com/willin/hexo-wordcount
 post_wordcount:
   item_text: true
@@ -311,16 +312,15 @@ post_wordcount:
   min2read: true
   totalcount: false
   separated_meta: true
-</code></pre><p>themes/~~/layout/_macro/post.swig</p>
-<h4 id="字体统计页面修改"><a href="#字体统计页面修改" class="headerlink" title="字体统计页面修改"></a>字体统计页面修改</h4><pre><code>&lt;span title=&quot;{{ __('post.wordcount') }}&quot;&gt;
+</code></pre><h4 id="字体统计页面修改"><a href="#字体统计页面修改" class="headerlink" title="字体统计页面修改"></a>字体统计页面修改</h4><pre><code>themes/~~/layout/_macro/post.swig
+&lt;span title=&quot;{{ __('post.wordcount') }}&quot;&gt;
  {{ wordcount( post.content) }} 字
 &lt;/span&gt;
 </code></pre><h4 id="阅读时间页面修改"><a href="#阅读时间页面修改" class="headerlink" title="阅读时间页面修改"></a>阅读时间页面修改</h4><pre><code>&lt;span title=&quot;{{ __('post.min2read') }}&quot;&gt;
   {{ min2read( post.content) }} 分钟
 &lt;/span&gt;
-</code></pre><h3 id="添加友情链接"><a href="#添加友情链接" class="headerlink" title="添加友情链接"></a>添加友情链接</h3><blockquote>
-<p>_config.yml</p>
-<pre><code># Blog rolls
+</code></pre><h3 id="添加友情链接"><a href="#添加友情链接" class="headerlink" title="添加友情链接"></a>添加友情链接</h3><pre><code>_config.yml
+# Blog rolls
 links_icon: link
 links_title: Links
 links_layout: block
@@ -328,13 +328,13 @@ links_layout: block
 links:
   test: http://www.example.com
 // links_layout 注释掉其中一个
-</code></pre></blockquote>
-<h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><pre><code>$ hexo new page about
+</code></pre><h3 id="创建标签页"><a href="#创建标签页" class="headerlink" title="创建标签页"></a>创建标签页</h3><pre><code>$ hexo new page about
 创建完成会在source/about 中生成index.html。这个就叫做页面，不在文章列表显示，可以通过http://localhost/about浏览。
 </code></pre><p>页面支持文章的大部分属性，除了分类和标签。</p>
 <h3 id="指定404页面"><a href="#指定404页面" class="headerlink" title="指定404页面"></a>指定404页面</h3><p>直接在根source目录下,与_posts文件夹平级.创建404页面,如(公益404页面),</p>
-<h3 id="hexo博客图片问题"><a href="#hexo博客图片问题" class="headerlink" title="hexo博客图片问题"></a>hexo博客图片问题</h3><p><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&amp;fm=27&amp;gp=0.jpg" alt="春天 | center"></p>
-<p><a href="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&amp;fm=27&amp;gp=0.jpg" target="_blank" rel="noopener">https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&amp;fm=27&amp;gp=0.jpg</a></p>
+<h3 id="hexo博客图片问题"><a href="#hexo博客图片问题" class="headerlink" title="hexo博客图片问题"></a>hexo博客图片问题</h3><p><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&amp;fm=27&amp;gp=0.jpg" alt="春天 | center"><br><a href="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&amp;fm=27&amp;gp=0.jpg" target="_blank" rel="noopener">https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1544562179,158177896&amp;fm=27&amp;gp=0.jpg</a></p>
+<h3 id="发布出现如下错误"><a href="#发布出现如下错误" class="headerlink" title="发布出现如下错误"></a>发布出现如下错误</h3><p>$ hexo d<br>ERROR Deployer not found: git</p>
+<p>安装 npm install –save hexo-deployer-git</p>
 
       
     </div>
@@ -500,7 +500,7 @@ links:
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加字体统计-阅读时间统计"><span class="nav-number">1.</span> <span class="nav-text">添加字体统计,阅读时间统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字体统计页面修改"><span class="nav-number">1.1.</span> <span class="nav-text">字体统计页面修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阅读时间页面修改"><span class="nav-number">1.2.</span> <span class="nav-text">阅读时间页面修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加友情链接"><span class="nav-number">2.</span> <span class="nav-text">添加友情链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建标签页"><span class="nav-number">3.</span> <span class="nav-text">创建标签页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定404页面"><span class="nav-number">4.</span> <span class="nav-text">指定404页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博客图片问题"><span class="nav-number">5.</span> <span class="nav-text">hexo博客图片问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加字体统计-阅读时间统计"><span class="nav-number">1.</span> <span class="nav-text">添加字体统计,阅读时间统计</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#字体统计页面修改"><span class="nav-number">1.1.</span> <span class="nav-text">字体统计页面修改</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#阅读时间页面修改"><span class="nav-number">1.2.</span> <span class="nav-text">阅读时间页面修改</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加友情链接"><span class="nav-number">2.</span> <span class="nav-text">添加友情链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建标签页"><span class="nav-number">3.</span> <span class="nav-text">创建标签页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#指定404页面"><span class="nav-number">4.</span> <span class="nav-text">指定404页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hexo博客图片问题"><span class="nav-number">5.</span> <span class="nav-text">hexo博客图片问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发布出现如下错误"><span class="nav-number">6.</span> <span class="nav-text">发布出现如下错误</span></a></li></ol></div>
             
 
           </div>
